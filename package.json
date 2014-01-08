@@ -1,0 +1,24 @@
+{
+	"name": "iblogsite-express",
+	"version": "0.0.1",
+	"description": "Implement iBlogsite project with Node.js and Express",
+	"private": true,
+	"dependencies": {
+		"express": "3.4.7",
+		"less-middleware": "*",
+		"jade": "*"
+	},
+	"main": "app.js",
+	"scripts": {
+		"start": "node app",
+		"test": "nodemon -e 'js jade' app.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "ssh://git@bitbucket.org/tkliuxing/iblogsite-express.git"
+	},
+	"author": "",
+	"license": "BSD",
+	"readmeFilename": "README.md",
+	"gitHead": "920b0676acec22919f4beb49a6c4461b18d4debf"
+}
