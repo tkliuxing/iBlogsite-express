@@ -2,6 +2,17 @@ doctype html
 html
   head
     title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+    link(rel='stylesheet', href='/stylesheets/bootstrap3/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    //- link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    include includes/navbar
     block content
+    hr
+    footer(style="text-align:center;")
+        p: <a href="http://weibo.com/oyhy" target="_blank">OuYangHongYu</a> 2011-2012
+        p.
+            本站代码托管于<a href="https://github.com/tkliuxing/iBlogsite-django/" target="_blank">Github</a>,欢迎clone!
+    script(src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js")
+    script(src="/stylesheets/bootstrap3/js/bootstrap.min.js")

@@ -1,5 +1,56 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	.container
+		//- div
+		//- 	h1= title
+		//- 	p Welcome to #{title}
+		.row
+			.col-md-8
+				//- blog content for loop
+				each blog in blogs
+					.well
+						.alert.alert-success: h4= blog.title
+						.alert.alert-warning
+							p= blog.content
+						.well.note.date
+							img.gravatar(src="https://secure.gravatar.com/avatar/a67fc095571323280929309f7e71f3fc.jpg?s=40&amp;r=g&amp;d=mm",width="40",height="40")
+							.date
+								p Author
+								p date time
+							a.btn.btn-success(href="#")
+								span.glyphicon.glyphicon-comment
+								| &nbsp;评论(0)
+				//- end loop
+				.well
+					.alert.alert-success: h4 Title One
+					.alert.alert-warning
+						p contents
+						p contents
+					.well.note.date
+						img.gravatar(src="https://secure.gravatar.com/avatar/a67fc095571323280929309f7e71f3fc.jpg?s=40&amp;r=g&amp;d=mm",width="40",height="40")
+						.date
+							p Author
+							p date time
+						a.btn.btn-success(href="#")
+							span.glyphicon.glyphicon-comment
+							| &nbsp;评论(0)
+				//- end blog content
+			//- sidebar
+			.col-md-4
+				.well
+					h4 标签:
+					a.label.label-warning(href="#") iblog
+					&nbsp;
+					a.label.label-warning(href="#") python
+					&nbsp;
+					a.label.label-warning(href="#") javascript
+					&nbsp;
+					a.label.label-warning(href="#") django
+					&nbsp;
+				.well
+					h4 简介:
+					ul
+						li haha
+						li heihei
+			//- end sidebar

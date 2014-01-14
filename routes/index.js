@@ -3,7 +3,14 @@
  */
 
 exports.index = function(req, res) {
-	res.render('index', {
-		title: 'Express'
-	});
+	var C = {
+		blogs: [{
+			title: "asdf",
+			content: "hahahah",
+		}, {
+			title: "foo",
+			content: "bar",
+		}]
+	};
+	res.render('index', C);
 };
