@@ -6,7 +6,10 @@
 	"dependencies": {
 		"express": "3.4.7",
 		"less-middleware": "*",
-		"jade": "*"
+		"jade": "*",
+		"moment": "2.5.0",
+		"lodash": "2.3.0",
+		"sequelize": "~2.0.0-dev1"
 	},
 	"main": "app.js",
 	"scripts": {
@@ -15,7 +18,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "ssh://git@bitbucket.org/tkliuxing/iblogsite-express.git"
+		"url": "git://git@bitbucket.org/tkliuxing/iblogsite-express"
 	},
 	"author": "",
 	"license": "BSD",
