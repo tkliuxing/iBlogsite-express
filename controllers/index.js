@@ -1,6 +1,3 @@
-/*
- * GET home page.
- */
 module.exports = {
 	index: function(req, res) {
 		var C = {
@@ -15,5 +12,6 @@ module.exports = {
 		res.render('index', C);
 	},
 	user: require('./user'),
-	fun: require('./fun')
+	fun: require('./fun'),
+	blog_create: require('./blog').blog_create
 };
