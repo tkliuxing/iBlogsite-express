@@ -1,4 +1,16 @@
 extends layout
 
 block content
-	h HA!
+	.container
+		.row
+			.col-md-8
+				.well
+					form(action="/blog/create",method="POST")
+						.form-group
+							label Blog标题
+							input.form-control(type="text",name="title")
+						.form-group
+							label Blog正文
+							textarea.form-control(row="15",name="content")
+						button.btn.btn-default(type="submit") 提交
+			include includes/sidebar
