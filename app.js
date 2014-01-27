@@ -12,26 +12,26 @@ var routes = require('./config/routes');
 var app = express();
 
 environment(app);
-app.use(orm.express("sqlite://./test.db", {
-	define: function(db, models, next) {
-		models.Blog = db.define("blog", {
-			title: {
-				type: "text"
-			},
-			content: {
-				type: "text",
-				size: 10000
-			}
-		}, {
-			methods: {
-				bigtitle: function() {
-					return this.title;
-				}
-			}
-		});
-		next();
-	}
-}));
+// app.use(orm.express("sqlite://./test.db", {
+// 	define: function(db, models, next) {
+// 		models.Blog = db.define("blog", {
+// 			title: {
+// 				type: "text"
+// 			},
+// 			content: {
+// 				type: "text",
+// 				size: 10000
+// 			}
+// 		}, {
+// 			methods: {
+// 				bigtitle: function() {
+// 					return this.title;
+// 				}
+// 			}
+// 		});
+// 		next();
+// 	}
+// }));
 routes(app);
 
 http.createServer(app).listen(app.get('port'), function() {

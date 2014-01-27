@@ -6,8 +6,19 @@ function blog_create(req, res) {
 		res.render('blog_create', C);
 	}
 	if (req.method == "POST") {
-		console.log(req.models);
-		res.redirect(301, "/")
+		console.log(req.body);
+		if (req.body.title && req.body.content) {
+			var msg = {
+				title: req.body.title,
+				body: req.body.content
+			};
+			req.models.Blog.create([msg], function(err, item) {
+				console.log(err);
+				res.redirect(301, "/");
+			});
+		} else {
+			res.redirect(301, "/");
+		}
 	} else {
 		res.status(404);
 	}

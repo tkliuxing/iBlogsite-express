@@ -12,12 +12,12 @@ block content
 					.well
 						.alert.alert-success: h4= blog.title
 						.alert.alert-warning
-							p= blog.content
+							p= blog.body
 						.well.note.date
 							img.gravatar(src="https://secure.gravatar.com/avatar/a67fc095571323280929309f7e71f3fc.jpg?s=40&amp;r=g&amp;d=mm",width="40",height="40")
 							.date
 								p Author
-								p date time
+								p= blog.getdatestring()
 							a.btn.btn-success(href="#")
 								span.glyphicon.glyphicon-comment
 								| &nbsp;评论(0)

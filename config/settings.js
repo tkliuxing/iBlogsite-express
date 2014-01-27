@@ -9,9 +9,9 @@ var settings = {
 			pool: true
 		},
 		host: "127.0.0.1",
-		database: "anontxt_dev",
-		user: "anontxt",
-		password: "apassword"
+		database: "blog_test",
+		user: "blog",
+		password: "blog"
 	}
 };
 
